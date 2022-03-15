@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import punkLogo from "../assets/header/cryptopunk-logo.png";
+import searchIcon from "../assets/header/search.png";
 
 const Header = () => {
   return (
@@ -8,7 +9,17 @@ const Header = () => {
       <div className="logoContainer">
         <img src={punkLogo} alt="punkLogo" className="punkLogo" />
       </div>
-      <h1>Header</h1>
+
+      <div className="searchBar">
+        <div className="searchIconContainer">
+          <img src={searchIcon} alt="searchIcon" />
+        </div>
+        <input
+          type="text"
+          className="searchInput"
+          placeholder="Collection, item or user..."
+        />
+      </div>
     </div>
   );
 };
