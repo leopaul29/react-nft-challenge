@@ -68,7 +68,7 @@
 .ownerNameandHandle {
   flex: 1;
 }
-.ownerHandle {
+.ownerHandle > a {
   color: #00ebfe;
 }
 .ownerLink {

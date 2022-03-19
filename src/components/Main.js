@@ -35,8 +35,20 @@ const Main = ({ selectedPunk, punkListData }) => {
             </div>
             <div className="ownerDetails">
               <div className="ownerNameandHandle">
-                <div className="ownerAddress">{activePunk.owner.address}</div>
-                <div className="ownerHandle">@leopaul29</div>
+                <div className="ownerAddress">
+                    {activePunk.owner.address}
+                </div>
+                <div className="ownerHandle">
+                  <a
+                    href={
+                      "https://testnets.opensea.io/" + activePunk.owner.address
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                  @{activePunk.user?.username ? activePunk.user.username : "UnknowUser"}
+                  </a>
+                </div>
               </div>
               <div className="ownerLink">
                 <img src={instagramLogo} alt="instagramLogo" />
@@ -44,9 +56,15 @@ const Main = ({ selectedPunk, punkListData }) => {
               <div className="ownerLink">
                 <img src={twitterLogo} alt="twitterLogo" />
               </div>
-              <div className="ownerLink">
-                <img src={moreIcon} alt="moreIcon" />
-              </div>
+              <a
+                href={activePunk.permalink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="ownerLink">
+                  <img src={moreIcon} alt="moreIcon" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
