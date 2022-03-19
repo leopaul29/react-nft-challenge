@@ -4,7 +4,7 @@
 .mainContent {
   display: flex;
   padding-bottom: 20px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--dark-background);
 }
 .punkHighlight {
   flex: 0.25;
@@ -32,6 +32,7 @@
 .title {
   font-size: 96px;
   font-weight: 800;
+  color: var(--light-text);
 }
 .itemNumber {
   color: #a1a5b0;
@@ -62,6 +63,7 @@
   display: flex;
   align-items: center;
   flex: 1;
+  color: var(--light-text);
 }
 .ownerNameandHandle {
   flex: 1;
@@ -70,11 +72,13 @@
   color: #00ebfe;
 }
 .ownerLink {
+  cursor: pointer;
   padding: 12px;
   border-radius: 50px;
   height: 50px;
   width: 50px;
-  border: 1px solid #fff;
+  border: 1px solid var(--dark-background);
+  background-color: var(--black);
   margin: 0 0 0 10px;
 }
 .ownerLink > img {

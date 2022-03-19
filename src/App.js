@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Punklist from "./components/Punklist";
 import Main from "./components/Main";
+import { keepTheme } from "./utils/themes";
 
 function App() {
   const [punkListData, setPunkListData] = useState([]);
@@ -14,13 +15,16 @@ function App() {
     // use project url blockchain address and not personal wallet address
     const getMyNfts = async () => {
       const openseaData = await axios.get(
-        "https://testnets-api.opensea.io/assets?order_direction=asc&asset_contract_address=0x56e6B5dFd5447f23d8a192FcD304A9656CCdD1a6"
+        "https://testnets-api.opensea.io/assets?order_direction=asc&asset_contract_address=0x56e6B5dFd5447f23d8a192FcD304A9656CCdD1a6&offset=0&limit=20"
       );
-      console.log(openseaData.data.assets);
       setPunkListData(openseaData.data.assets);
     };
     return getMyNfts();
   }, []);
+
+  useEffect(() => {
+    keepTheme();
+  });
 
   return (
     <div className="app">
@@ -28,7 +32,10 @@ function App() {
       {punkListData.length > 0 && (
         <>
           <Main punkListData={punkListData} selectedPunk={selectedPunk} />
-          <Punklist punkListData={punkListData} setSelectedPunk={setSelectedPunk} />
+          <Punklist
+            punkListData={punkListData}
+            setSelectedPunk={setSelectedPunk}
+          />
         </>
       )}
     </div>

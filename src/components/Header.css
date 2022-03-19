@@ -1,5 +1,5 @@
 .header {
-  color: #fff;
+  color: var(--light-text);
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -11,15 +11,17 @@
 }
 
 .punkLogo {
+  cursor: pointer;
   width: 200px;
 }
 
 .searchBar {
-  background-color: #1c1c1e;
+  background-color: var(--search-background);
   height: 50px;
   flex: 1;
   display: flex;
   border-radius: 50px;
+  border: 1px solid var(--search-border);
   align-items: center;
 }
 
@@ -32,7 +34,7 @@
   border: none;
   width: 100%;
   outline: none;
-  color: #eee;
+  color: var(--light-text);
   font-size: 16px;
 }
 
@@ -42,6 +44,8 @@
 
 .headerItems > p {
   margin: 10px;
+  cursor: pointer;
+  color: var(--gray-text);
 }
 
 .headerActions {
@@ -53,23 +57,13 @@
   margin: 10px;
 }
 
-.themeSwitchContainer {
-  display: flex;
-  background-color: #1c1c1e;
-  border-radius: 50px;
-  padding: 15px;
-  justify-content: center;
-  align-items: center;
-  object-fit: contain;
-}
-
-.themeSwitchContainer > img {
-  height: 25px;
-}
-
 .loginButton {
   background: linear-gradient(to right, #59f9b7, #66feea);
   padding: 15px 40px;
   border-radius: 50px;
-  color: black;
+  cursor: pointer;
+}
+.loginButton > a {
+  text-decoration: none;
+  color: var(--black);
 }

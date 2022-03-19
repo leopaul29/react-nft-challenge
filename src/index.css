@@ -16,3 +16,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --white: #fff;
+  --gray: #eee;
+  --dark-gray: #1c1c1e;
+  --black: #000;
+}
+
+.theme-dark {
+  --light-text: var(--white);
+  --dark-text: var(--black);
+
+  --light-background: var(--black);
+  --dark-background: var(--white);
+
+  --search-background: var(--dark-gray);
+  --search-border: var(--dark-gray);
+
+  --switch-background: var(--dark-gray);
+  --switch-border: var(--dark-gray);
+}
+.theme-light {
+  --light-text: var(--black);
+  --dark-text: var(--light);
+
+  --light-background: var(--white);
+  --dark-background: var(--black);
+
+  --switch-background: var(--light);
+  --switch-border: var(--dark-gray);
+
+  --search-background: var(--light);
+  --search-border: var(--dark-gray);
+}

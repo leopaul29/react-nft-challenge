@@ -1,4 +1,5 @@
 .collectionCard {
+  cursor: pointer;
   color: white;
   background-color: #1a1c1e;
   border-radius: 20px;
@@ -18,9 +19,9 @@
 }
 
 .id {
-    color: #a1a5b0;
-    font-size: 18px;
-    font-weight: 600;
+  color: #a1a5b0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .collectionCard > img {

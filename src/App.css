@@ -1,5 +1,5 @@
 .app {
-  background-color: #000;
+  background-color: var(--light-background);
   padding: 20px;
   min-height: 100vh;
   max-width: 100vw;

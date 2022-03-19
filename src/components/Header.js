@@ -2,8 +2,7 @@ import React from "react";
 import "./Header.css";
 import punkLogo from "../assets/header/cryptopunk-logo.png";
 import searchIcon from "../assets/header/search.png";
-import themeSwitchIcon from "../assets/header/theme-switch.png";
-
+import ThemeSwitch from "./ThemeSwitch";
 const Header = () => {
   return (
     <div className="header">
@@ -29,12 +28,18 @@ const Header = () => {
       </div>
 
       <div className="headerActions">
-        <div className="themeSwitchContainer">
-          <img src={themeSwitchIcon} alt="theme-switch" />
-        </div>
+        <ThemeSwitch />
       </div>
 
-      <div className="loginButton">GET IN</div>
+      <div className="loginButton">
+        <a
+          href="https://testnets.opensea.io/collection/cp-punks-31z9zk77zk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GET IN
+        </a>
+      </div>
     </div>
   );
 };
