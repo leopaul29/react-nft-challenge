@@ -12,7 +12,7 @@ const Punklist = ({ punkListData }) => {
             id={punk.token_id}
             name={punk.name}
             traits={punk.traits}
-            image={punk.image_original_url}
+            image={punk.image_url}
           />
         </div>
       ))}
