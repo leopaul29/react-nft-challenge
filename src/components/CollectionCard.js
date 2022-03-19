@@ -9,7 +9,7 @@ const CollectionCard = ({ id, name, traits, image }) => {
       <img src={image} alt="punkImage" />
       <div className="details">
         <div className="name">
-          {name} <div className="id">#{id}</div>
+          {name} <div className="id">•#{id}</div>
         </div>
         <div className="priceContainer">
           <img src={weth} alt="weth" className="wethImage" />
