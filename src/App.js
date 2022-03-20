@@ -15,7 +15,7 @@ function App() {
     // use project url blockchain address and not personal wallet address
     const getMyNfts = async () => {
       const openseaData = await axios.get(
-        "https://testnets-api.opensea.io/assets?order_direction=asc&asset_contract_address=0x56e6B5dFd5447f23d8a192FcD304A9656CCdD1a6&offset=0&limit=20"
+        "https://rinkeby-api.opensea.io/api/v1/assets?order_direction=asc&asset_contract_address=0x56e6B5dFd5447f23d8a192FcD304A9656CCdD1a6&offset=0&limit=20"
       );
       setPunkListData(openseaData.data.assets);
     };
